@@ -1,0 +1,23 @@
+{% extends 'library/base.html' %}
+
+{% block page_title %} {{book.title}} {% endblock page_title %}
+
+{% block page_content %}
+<div class="container m-auto mb-5 m-5 d-flex justify-content-center align-items-center flex-column">
+    <img src="{{book.url}}{{current_page}}.jpg?raw=true" alt="{{book.title}}" class="my-3 w-100">
+    <div class="w-100 d-flex flex-row justify-content-between align-items-center">
+        <a href="{% url 'library:detail' book.pk previous_page %}" class="d-flex align-items-center justify-content-between btn btn-outline-secondary">
+            <i class="bi bi-arrow-left-square-fill"></i>
+            &nbsp;
+            Prev
+        </a>
+        <span class="lead text-white">{{book.title}} - Page {{current_page}} of {{book.total_pages}}</span>
+        <a href="{% url 'library:detail' book.pk next_page %}" class="d-flex align-items-center justify-content-between btn btn-outline-secondary">
+            Next
+            &nbsp;
+            <i class="bi bi-arrow-right-square-fill"></i>
+        </a>
+    </div>
+</div>
+
+{% endblock page_content %}
