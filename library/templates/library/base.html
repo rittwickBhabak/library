@@ -29,13 +29,22 @@
             <div class="collapse navbar-collapse" id="main-nav">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link" href="{% url 'library:list' %}"  data-bs-toggle="tooltip" data-bs-placement="bottom" title="Book List"><i class="bi bi-list"></i></a>
+                    <a class="nav-link" href="{% url 'library:list' %}"  data-bs-toggle="tooltip" data-bs-placement="bottom" title="Book List">
+                        <span class="d-inline d-lg-none">Book List &nbsp;</span>
+                        <i class="bi bi-list"></i>
+                    </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{% url 'library:create' %}"  data-bs-toggle="tooltip" data-bs-placement="bottom" title="Add New Book"><i class="bi bi-plus-circle"></i></a>
+                    <a class="nav-link" href="{% url 'library:create' %}"  data-bs-toggle="tooltip" data-bs-placement="bottom" title="Add New Book">
+                        <span class="d-inline d-lg-none">Add New Book &nbsp;</span>
+                        <i class="bi bi-plus-circle"></i>
+                    </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{% url 'admin:index' %}"   data-bs-toggle="tooltip" data-bs-placement="bottom" title="Open Admin"><i class="bi bi-person-circle"></i></a>
+                    <a class="nav-link" href="{% url 'admin:index' %}"   data-bs-toggle="tooltip" data-bs-placement="bottom" title="Open Admin">
+                        <span class="d-inline d-lg-none">Open Admin &nbsp;</span>
+                        <i class="bi bi-person-circle"></i>
+                    </a>
                 </li>
             </ul>
             <form class="d-flex">
@@ -57,7 +66,7 @@
     </div>
     {% endif %}
     {% block page_content %}
-    
+
     {% endblock page_content %}
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <script>

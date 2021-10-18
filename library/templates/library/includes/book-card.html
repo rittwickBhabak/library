@@ -5,6 +5,8 @@
     <p class="card-text text-end">
       {% if book.author %}
         By {{book.author}}
+      {% else %}
+      &nbsp;
       {% endif %}
     </p>
     <a href="{% url 'library:detail' book.pk book.last_accessed_page %}" class="btn btn-primary">

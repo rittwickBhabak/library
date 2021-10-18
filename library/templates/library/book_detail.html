@@ -7,7 +7,7 @@
     <img src="{{book.url}}{{current_page}}.jpg?raw=true" alt="{{book.title}}" class="my-3 w-100">
     <div class="w-100 d-flex flex-row justify-content-between align-items-center">
         <a href="{% url 'library:detail' book.pk previous_page %}" class="d-flex align-items-center justify-content-between btn btn-outline-secondary">
-            <i class="bi bi-arrow-left-square-fill"></i>
+            <i class="bi bi-arrow-left"></i>
             &nbsp;
             <span class="d-none d-lg-inline">
                 Prev
@@ -19,7 +19,7 @@
                 Next
             </span>
             &nbsp;
-            <i class="bi bi-arrow-right-square-fill"></i>
+            <i class="bi bi-arrow-right"></i>
         </a>
     </div>
 </div>
