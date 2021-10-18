@@ -9,11 +9,15 @@
         <a href="{% url 'library:detail' book.pk previous_page %}" class="d-flex align-items-center justify-content-between btn btn-outline-secondary">
             <i class="bi bi-arrow-left-square-fill"></i>
             &nbsp;
-            Prev
+            <span class="d-none d-lg-inline">
+                Prev
+            </span>
         </a>
         <span class="lead text-white">{{book.title}} - Page {{current_page}} of {{book.total_pages}}</span>
         <a href="{% url 'library:detail' book.pk next_page %}" class="d-flex align-items-center justify-content-between btn btn-outline-secondary">
-            Next
+            <span class="d-none d-lg-inline">
+                Next
+            </span>
             &nbsp;
             <i class="bi bi-arrow-right-square-fill"></i>
         </a>
